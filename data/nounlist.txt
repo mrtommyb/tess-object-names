@@ -1,3 +1,4 @@
+click-track
 aardvark
 abyssinian
 accelerator
@@ -997,6 +998,7 @@ hen
 heron
 herring
 hexagon
+hi-hat
 hill
 himalayan
 hip
