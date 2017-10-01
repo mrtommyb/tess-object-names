@@ -17,7 +17,9 @@ class nameYield():
         n_nouns = self.nounlist.shape[0]
         self.read_adjectivelist()
         n_adjectives = self.adjectivelist.shape[0]
-        self.sorted1 = choice(self.adjectivelist, n_adjectives,
+        self.read_adverblist()
+        n_adverbs = self.adverblist.shape[0]
+        self.sorted1 = choice(self.adverblist, n_adverbs,
                               replace=False, )
         self.reset_seed()
         self.sorted2 = choice(self.adjectivelist, n_adjectives,
@@ -43,7 +45,7 @@ class nameYield():
         self._word2 = self.sorted2[int(floor(inputnum / n_nouns %
             n_adjectives))]
         self._word1 = self.sorted1[int(floor(inputnum / n_nouns /
-            n_adjectives % n_adjectives))]
+            n_adjectives % n_adverbs))]
 
     def phrase(self):
         return self._word1, self._word2, self._word3
@@ -55,6 +57,10 @@ class nameYield():
     def read_adjectivelist(self):
         filename = '../data/adjectivelist.txt'
         self.adjectivelist = loadtxt(filename, dtype=str, )
+
+    def read_adverblist(self):
+        filename = '../data/adverblist.txt'
+        self.adverblist = loadtxt(filename, dtype=str, )
 
     def validate_inputnum(self, inputmum):
         pass
