@@ -1,4 +1,7 @@
 # tess-object-names
+Long numbers are impossible to remember. It would be great if things had memorable names. Well, now they can.
+
+
 messing with giving TIC objects better names
 
 plan is to have names like
